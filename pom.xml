@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>223d616e-cd3e-4bb4-b066-d05acedde826</groupId>
-	<artifactId>testingCICD</artifactId>
+	<artifactId>testing</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
@@ -37,7 +37,7 @@
 						<connectedAppClientId>${env.GLOBAL_MULESOFT_CICD_CLIENT_ID}</connectedAppClientId>
 						<connectedAppClientSecret>${env.GLOBAL_MULESOFT_CICD_CLIENT_SECRET}</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
-						<applicationName>testingCICD</applicationName>
+						<applicationName>testing</applicationName>
 						<businessGroupId>${project.groupId}</businessGroupId>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
