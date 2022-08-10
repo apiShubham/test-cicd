@@ -37,7 +37,7 @@
 						<connectedAppClientId>${env.GLOBAL_MULESOFT_CICD_CLIENT_ID}</connectedAppClientId>
 						<connectedAppClientSecret>${env.GLOBAL_MULESOFT_CICD_CLIENT_SECRET}</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
-						<applicationName>testing210</applicationName>
+						<applicationName>testing123</applicationName>
 						<businessGroupId>${project.groupId}</businessGroupId>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
