@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+<servers>
+    <server>
+        <id>MuleRepository</id>
+            <username>${env.GLOBAL_NEXUS_USERNAME}</username>
+            <password>${env.GLOBAL_NEXUS_PASSWORD}</password>
+    </server>
+    <server>
+	    <id>anypoint-exchange-v2</id>
+            <username>~~~Client~~~</username>
+            <password>${env.GLOBAL_MULESOFT_CICD_CLIENT_ID}~?~${env.GLOBAL_MULESOFT_CICD_CLIENT_SECRET}</password>
+    </server>
+</servers>
+<profiles>
+    <profile>
+        <id>Mule</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <repositories>
+            <repository>
+                <id>MuleRepository</id>
+                <name>MuleRepository</name>
+                <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+                <layout>default</layout>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profile>
+	<profile>
+        <id>anypoint-exchange-v2</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+		<properties>
+                <mulesoft.exchange.groupid>223d616e-cd3e-4bb4-b066-d05acedde826</mulesoft.exchange.groupid>
+         </properties>
+        <repositories>
+            <repository>
+                <id>anypoint-exchange-v2</id>
+                <name>anypoint-exchange-v2</name>
+                <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${mulesoft.exchange.groupid}/maven</url>
+                <layout>default</layout>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profile>
+</profiles>   
+</settings>
