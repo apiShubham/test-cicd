@@ -21,5 +21,5 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Deploy with Maven
-      run: mvn -e -s settings.xml -DskipTests deploy -DmuleDeploy 
+      run: mvn -e -X -s settings.xml -DskipTests deploy -DmuleDeploy 
       
